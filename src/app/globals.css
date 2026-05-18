@@ -1,26 +1,114 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #0f0b1e;
+  --foreground: #f0eeff;
+  --card: #1a1035;
+  --card-foreground: #f0eeff;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --border: #2a1f4a;
+  --input: #2a1f4a;
+  --ring: #7c3aed;
+  --radius: 1rem;
+  --gold: #f5c518;
+  --green: #25d366;
+  --purple-dark: #0f0b1e;
+  --purple-mid: #1a1035;
+  --purple-card: #221645;
+  --purple-light: #7c3aed;
+  --purple-glow: #9d60ff;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body {
+    background-color: #0f0b1e;
+    color: #f0eeff;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Font utility classes */
+.font-bebas   { font-family: var(--font-bebas), impact, sans-serif; letter-spacing: 1px; }
+.font-rajdhani{ font-family: var(--font-rajdhani), sans-serif; }
+.font-inter   { font-family: var(--font-inter), sans-serif; }
+
+/* ── Animations ── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes pulse-purple {
+  0%,100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.5); }
+  50%      { box-shadow: 0 0 0 12px rgba(124,58,237,0); }
+}
+@keyframes pulse-gold {
+  0%,100% { box-shadow: 0 0 0 0 rgba(245,197,24,0.5); }
+  50%      { box-shadow: 0 0 0 12px rgba(245,197,24,0); }
+}
+@keyframes pulse-green {
+  0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  50%      { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-6px); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes countdown-blink {
+  0%,100% { opacity:1; }
+  50%      { opacity:0.4; }
+}
+@keyframes slide-up {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.anim-pulse-purple { animation: pulse-purple 2s ease-in-out infinite; }
+.anim-pulse-gold   { animation: pulse-gold   2s ease-in-out infinite; }
+.anim-pulse-green  { animation: pulse-green  2s ease-in-out infinite; }
+.anim-float        { animation: float 3s ease-in-out infinite; }
+.anim-slide-up     { animation: slide-up .5s ease both; }
+
+.ticker-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+
+/* gradient text */
+.grad-purple { background: linear-gradient(135deg,#9d60ff,#c084fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-gold   { background: linear-gradient(135deg,#f5c518,#ffdd55); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-white  { background: linear-gradient(180deg,#ffffff 0%,#c4b5fd 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+/* glass card */
+.glass {
+  background: rgba(34,22,69,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124,58,237,0.25);
 }
