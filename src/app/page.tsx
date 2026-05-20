@@ -11,6 +11,7 @@ import AppStats from "@/components/AppStats";
 import AppFooterCTA from "@/components/AppFooterCTA";
 import AppBottomNav from "@/components/AppBottomNav";
 import TickerBanner from "@/components/TickerBanner";
+import AppAvailableSites from "@/components/AppAvailableSites";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -42,6 +43,7 @@ export default function Home() {
         <AppSportCards />
         <AppOfferStrip />
         <AppStats />
+        <AppAvailableSites />
         <AppFooterCTA />
         <AppBottomNav />
       </div>
