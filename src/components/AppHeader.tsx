@@ -71,10 +71,16 @@ export default function AppHeader() {
         fontSize:"17px", cursor:"pointer",
       }}>⊞</div>
 
-      {/* Logo — SVG + text */}
+      {/* Logo — actual image */}
       <div style={{ display:"flex", alignItems:"center", gap:"8px" }}>
-        {/* if real logo.png exists it'll show; fallback to SVG */}
-        <YardLogo size={42} />
+        <img
+          src="/logo.png"
+          alt="22Yard Logo"
+          width={42}
+          height={42}
+          style={{ borderRadius:"50%", objectFit:"cover" }}
+          onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+        />
         <div style={{ lineHeight:1 }}>
           <div className="font-bebas" style={{
             fontSize:"24px",

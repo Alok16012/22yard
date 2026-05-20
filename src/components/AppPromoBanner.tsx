@@ -81,129 +81,38 @@ export default function AppPromoBanner() {
       </a>
 
       {/* ── MAIN POSTER BANNER ── */}
-      <div style={{
-        borderRadius:"20px",
-        overflow:"hidden",
-        border:"2px solid rgba(245,167,0,0.5)",
-        boxShadow:"0 8px 35px rgba(124,58,237,0.4)",
-        marginBottom:"12px",
-      }}>
-        {/* Stadium hero top */}
-        <div style={{
-          background:"linear-gradient(180deg,#0a1628 0%,#1a2d4a 30%,#0f1f3a 60%,#0a0e1a 100%)",
-          padding:"20px 16px 16px",
-          textAlign:"center",
-          position:"relative",
+      <a href="https://wa.me/918102104776" target="_blank" rel="noopener noreferrer"
+        style={{
+          display:"block",
+          borderRadius:"20px",
           overflow:"hidden",
-          borderBottom:"2px solid rgba(245,167,0,0.4)",
+          border:"2px solid rgba(245,167,0,0.5)",
+          boxShadow:"0 8px 35px rgba(124,58,237,0.4)",
+          marginBottom:"12px",
+          textDecoration:"none",
+          position:"relative",
         }}>
-          {/* Floodlight beams */}
-          <div style={{ position:"absolute", top:0, left:"15%", width:"2px", height:"70%",
-            background:"linear-gradient(to bottom,rgba(255,230,100,0.3),transparent)", transform:"rotate(15deg)", pointerEvents:"none" }}/>
-          <div style={{ position:"absolute", top:0, right:"15%", width:"2px", height:"70%",
-            background:"linear-gradient(to bottom,rgba(255,230,100,0.3),transparent)", transform:"rotate(-15deg)", pointerEvents:"none" }}/>
-          <div style={{ position:"absolute", top:0, left:"30%", width:"1px", height:"60%",
-            background:"linear-gradient(to bottom,rgba(255,230,100,0.2),transparent)", transform:"rotate(8deg)", pointerEvents:"none" }}/>
-          <div style={{ position:"absolute", top:0, right:"30%", width:"1px", height:"60%",
-            background:"linear-gradient(to bottom,rgba(255,230,100,0.2),transparent)", transform:"rotate(-8deg)", pointerEvents:"none" }}/>
-
-          {/* Logo */}
-          <div style={{ display:"flex", justifyContent:"center", marginBottom:"10px" }}>
-            <YardLogoSmall />
-          </div>
-
-          {/* Tagline bar */}
-          <div style={{
-            background:"linear-gradient(90deg,#7c3aed,#5b21b6,#7c3aed)",
-            borderRadius:"8px",
-            padding:"8px 16px",
-            marginBottom:"0",
-          }}>
-            <div className="font-bebas" style={{
-              fontSize:"18px", color:"#FFD700",
-              letterSpacing:"2px", lineHeight:1,
-            }}>SABSE BADA KHEL, SABSE BADI</div>
-            <div className="font-bebas" style={{
-              fontSize:"22px", color:"#ffffff",
-              letterSpacing:"3px", lineHeight:1,
-            }}>JEET! 🏆</div>
-          </div>
-        </div>
-
-        {/* 4-category grid */}
+        {/* Actual banner image */}
+        <img
+          src="/banner.jpg"
+          alt="22Yard Promo Banner"
+          style={{ width:"100%", display:"block", objectFit:"cover" }}
+        />
+        {/* Overlay CTA at bottom */}
         <div style={{
-          display:"grid",
-          gridTemplateColumns:"1fr 1fr",
-          gap:"2px",
-          background:"rgba(0,0,0,0.3)",
-        }}>
-          {categories.map((c, i) => (
-            <a key={i}
-              href="https://wa.me/918102104776"
-              target="_blank" rel="noopener noreferrer"
-              style={{
-                background: c.bg,
-                border:`1px solid ${c.border}`,
-                padding:"14px 10px",
-                display:"flex", flexDirection:"column", alignItems:"center",
-                textAlign:"center", gap:"6px",
-                textDecoration:"none",
-                boxShadow:`inset 0 0 20px ${c.glow}`,
-              }}>
-              <span style={{ fontSize:"30px", filter:"drop-shadow(0 2px 6px rgba(0,0,0,0.5))" }}>{c.emoji}</span>
-              <div className="font-bebas" style={{
-                fontSize:"14px", color:"#FFD700",
-                letterSpacing:"1px", lineHeight:1.1,
-              }}>{c.title}</div>
-              <div className="font-rajdhani" style={{
-                fontSize:"10px", color:"rgba(255,255,255,0.55)",
-                fontWeight:600, letterSpacing:"0.3px",
-              }}>{c.sub}</div>
-            </a>
-          ))}
-        </div>
-
-        {/* Bonus strip */}
-        <div style={{
-          background:"linear-gradient(90deg,#5b21b6,#7c3aed,#5b21b6)",
-          padding:"14px 16px 10px",
+          background:"linear-gradient(90deg,#FFD700,#F5C518,#FFD700)",
+          padding:"13px 16px",
           textAlign:"center",
-          borderTop:"2px solid rgba(245,167,0,0.5)",
+          borderTop:"2px solid rgba(255,215,0,0.6)",
         }}>
-          <div className="font-bebas" style={{
-            fontSize:"24px",
-            color:"#FFD700",
-            letterSpacing:"2px",
-            lineHeight:1,
-            textShadow:"0 0 20px rgba(255,215,0,0.6)",
-          }}>
-            HAR DEPOSIT PAR 10% BONUS
-          </div>
-          <div className="font-rajdhani" style={{
-            fontSize:"12px", color:"rgba(255,255,255,0.75)",
-            fontWeight:700, letterSpacing:"1px", marginTop:"3px",
-          }}>
-            RS 5000 SE KAM WALI DEPOSIT PAR
-          </div>
-        </div>
-
-        {/* Join CTA */}
-        <a href="https://wa.me/918102104776" target="_blank" rel="noopener noreferrer"
-          style={{
-            display:"flex", alignItems:"center", justifyContent:"center",
-            background:"linear-gradient(90deg,#FFD700,#F5C518,#FFD700)",
-            padding:"13px 16px",
-            textDecoration:"none",
-            borderTop:"2px solid rgba(255,215,0,0.6)",
-          }}>
           <span className="font-bebas" style={{
             fontSize:"17px", color:"#0f0b1e",
             letterSpacing:"2px",
           }}>
             🏏 KHELO 22 YARD MEIN — ABHI JOIN KARO!
           </span>
-        </a>
-      </div>
+        </div>
+      </a>
 
       {/* ── MINI STRIPS ── */}
       <div style={{ display:"flex", gap:"8px" }}>
