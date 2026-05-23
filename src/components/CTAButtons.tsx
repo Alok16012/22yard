@@ -10,7 +10,7 @@ export default function CTAButtons() {
     }}>
       {/* Primary */}
       <a
-        href="https://wa.me/918102104776"
+        href="https://wa.link/22yard"
         target="_blank"
         rel="noopener noreferrer"
         className="anim-pulse-gold"
@@ -34,7 +34,7 @@ export default function CTAButtons() {
 
       <div style={{ display: "flex", gap: "10px" }}>
         <a
-          href="https://wa.me/918102104776"
+          href="https://wa.link/22yard"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -54,7 +54,7 @@ export default function CTAButtons() {
         </a>
 
         <a
-          href="https://whatsapp.com/channel/"
+          href="https://wa.link/22yard"
           target="_blank"
           rel="noopener noreferrer"
           className="anim-pulse-green"

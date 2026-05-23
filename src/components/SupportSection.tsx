@@ -27,7 +27,7 @@ export default function SupportSection() {
       </p>
 
       <a
-        href="https://wa.me/918102104776"
+        href="https://wa.link/22yard"
         target="_blank"
         rel="noopener noreferrer"
         className="anim-pulse-green"

@@ -22,7 +22,7 @@ export default function Footer() {
 
       {/* Contact */}
       <div style={{ display: "flex", flexDirection: "column", gap: "6px", marginBottom: "20px" }}>
-        <a href="https://wa.me/918102104776" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.link/22yard" target="_blank" rel="noopener noreferrer"
           style={{ color: "#25d366", fontSize: "14px", fontWeight: 600, textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
           📱 +91 8102104776
         </a>

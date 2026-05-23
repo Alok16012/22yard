@@ -112,3 +112,13 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(124,58,237,0.25);
 }
+
+/* WhatsApp sticky animations */
+@keyframes wa-bounce {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+@keyframes wa-pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(1.7); opacity: 0; }
+}

@@ -12,6 +12,7 @@ import AppFooterCTA from "@/components/AppFooterCTA";
 import AppBottomNav from "@/components/AppBottomNav";
 import TickerBanner from "@/components/TickerBanner";
 import AppAvailableSites from "@/components/AppAvailableSites";
+import WhatsAppSticky from "@/components/WhatsAppSticky";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -46,6 +47,7 @@ export default function Home() {
         <AppAvailableSites />
         <AppFooterCTA />
         <AppBottomNav />
+        <WhatsAppSticky />
       </div>
     </div>
   );

@@ -82,7 +82,7 @@ export default function AppFooterCTA() {
           Join 10,000+ players — Get your ID in just 2 minutes!
         </p>
 
-        <a href="https://wa.me/918102104776" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.link/22yard" target="_blank" rel="noopener noreferrer"
           className="anim-pulse-gold"
           style={{
             display:"flex", alignItems:"center", justifyContent:"center", gap:"8px",
@@ -94,7 +94,7 @@ export default function AppFooterCTA() {
           <span style={{ fontFamily:"var(--font-bebas)", fontSize:"22px", letterSpacing:"2px" }}>START BETTING NOW 💰</span>
         </a>
 
-        <a href="https://wa.me/918102104776" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.link/22yard" target="_blank" rel="noopener noreferrer"
           style={{
             display:"flex", alignItems:"center", justifyContent:"center", gap:"8px",
             background:"linear-gradient(135deg,#25d366,#128c7e)",
